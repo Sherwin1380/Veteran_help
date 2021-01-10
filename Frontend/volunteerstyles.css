@@ -1,0 +1,37 @@
+body
+{
+	padding-left: 30%;
+	padding-right: 30%;
+	background-color: #f5eaba;
+}
+
+.main_page_button{
+	width: 275px;
+    display: block;
+    text-align: center;
+}
+
+.container {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+  }
+  .container .btn-holder {
+    justify-content: flex-end;
+    display: flex;
+  }
+
+.hidden_form{
+	display: none;
+}
+
+.map{
+	grid-column:2;
+	height: 450px;
+    width: 450px;
+}
+
+.my-leaflet-map-container img {
+    max-height: none;
+}
