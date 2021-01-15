@@ -52,6 +52,43 @@ namespace Sasasaa.Models
             return true;
         }
 
+        internal static object getOrderLIST()
+        {
+            List<OrderListContent> list = new List<OrderListContent>();
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = "Server=localhost;Database=master;Trusted_Connection=True; Initial Catalog=Veteranhelp;";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            string query1 = "SELECT * FROM ORDER_TABLE_VETERAN";
+            SqlCommand myCommand1 = new SqlCommand(query1, cnn);
+            using (SqlDataReader reader = myCommand1.ExecuteReader())
+                while (reader.Read())
+                {
+                    OrderListContent or = new OrderListContent();
+                    var orderid = (int)reader["ORDER_ID"];
+                    var veteran_mail = (string)reader["VETERAN_MAIL"];
+                    var status = (string)reader["STATUS"];
+                    var volunteer_mail = "";
+                    try
+                    {
+                        volunteer_mail = (string)reader["VOLUNTEER"];
+                    }
+                    catch { }
+                    var price = (double)reader["PRICE"];
+                    var items = (string)reader["ITEMS"];
+                    or.orderid = orderid;
+                    or.items = items;
+                    or.price = price;
+                    or.volunteer_mail = volunteer_mail;
+                    or.veteran_mail = veteran_mail;
+                    or.Status = status;
+                    list.Add(or);
+                }
+            cnn.Close();
+            return list;
+        }
+
         internal static void saveorder(Accepted p)
         {
             string connetionString;

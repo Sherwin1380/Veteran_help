@@ -175,6 +175,7 @@
     <Compile Include="Models\EndPointDetails.cs" />
     <Compile Include="Models\Items.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderListContent.cs" />
     <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Pricelist.cs" />
     <Compile Include="Models\Veteran.cs" />

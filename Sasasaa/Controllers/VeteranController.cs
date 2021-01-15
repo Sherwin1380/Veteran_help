@@ -17,6 +17,14 @@ namespace Sasasaa.Controllers
             var t = Database.AddVeteran(p);
             return Ok(t);
         }
+
+
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        public IHttpActionResult Get()
+        {
+            var t = Database.getOrderLIST();
+            return Ok(t);
+        }
     }
 
 }
