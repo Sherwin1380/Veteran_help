@@ -35,3 +35,7 @@ body
 .my-leaflet-map-container img {
     max-height: none;
 }
+
+th, td {
+  padding: 15px;
+}

@@ -11,6 +11,8 @@ window.onload = function load(){
     var geocoder = L.esri.Geocoding.geocodeService();
     var display_pickup_markers;
 
+    var table =  document.getElementById("orders_table_list");
+
     var order_list = L.map('order_list').setView([39.39870315600007, -99.41461918999994], 3);	
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 		maxZoom: 18,
@@ -402,6 +404,47 @@ fetch('https://localhost:44335/api/Credentials', {
         document.getElementById("volunteer_sign_in").reset();
         document.getElementById("veteran_sign_in").reset();
         document.getElementById("item_added_form").reset();
+    }
+
+    document.getElementById("returntohome1234").onclick = function return_home(){
+        document.getElementById("orders_table").style.display = "none"
+        document.getElementById("main_form").style.display = "block";
+        document.getElementById("volunteer_sign_in").reset();
+        document.getElementById("veteran_sign_in").reset();
+        document.getElementById("item_added_form").reset();
+    }
+
+    document.getElementById("orders").onclick = function return_home(){
+        document.getElementById("main_form").style.display = "none";
+        document.getElementById("orders_table").style.display = "block";
+        
+        var address = 'https://localhost:44335/api/Veteran/';
+		fetch(address, {
+			method: 'GET',
+        })
+        .then(response => response.json())
+			.then(data => {
+                for(var i = 0;  i < data.length; i++){	
+                populatetable(data[i]);
+                }
+            });
+        }
+
+        function populatetable(data)
+        {
+        let row = table.insertRow();
+      let items = row.insertCell(0);
+      let items_price = row.insertCell(1);
+      let veteran = row.insertCell(2);
+      let order_id = row.insertCell(3);
+      let status = row.insertCell(4);
+      let volunteer = row.insertCell(5);
+      items.innerHTML = data.items;
+      items_price.innerHTML = data.price;
+      veteran.innerHTML = data.veteran_mail;
+      order_id.innerHTML = data.orderid;
+      status.innerHTML = data.Status;
+      volunteer.innerHTML = data.volunteer_mail;
     }
 
 
