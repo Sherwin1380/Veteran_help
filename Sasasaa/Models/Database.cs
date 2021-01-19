@@ -173,12 +173,11 @@ namespace Sasasaa.Models
             double price = 0;
             string connetionString;
             SqlConnection cnn;
-            orderno++;
             double[] t = new double[3];
             connetionString = "Server=localhost;Database=master;Trusted_Connection=True; Initial Catalog=Veteranhelp;";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
-            string query1 = "SELECT ORDER_ID FROM ORDER_TABLE_VETERAN WHERE VETERAN_MAIL = @mail";
+            string query1 = "SELECT ORDER_ID FROM ORDER_TABLE_VETERAN WHERE VETERAN_MAIL = @mail and status='NOT ACCEPTED'";
             SqlCommand myCommand1 = new SqlCommand(query1, cnn);
             myCommand1.Parameters.AddWithValue("@mail", p.mail);
             using (SqlDataReader reader = myCommand1.ExecuteReader())
@@ -187,7 +186,8 @@ namespace Sasasaa.Models
                     t[0] = 0;
                     return t;
                 }
-                    for (int i = 0; i < 30; i++)
+            orderno++;
+            for (int i = 0; i < 30; i++)
                     {
                         if (p.itemlist[i] == 1)
                         {

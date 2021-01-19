@@ -33,15 +33,19 @@
 	<body>
 	<div id="main_form">
 		<div class="header">
+      <img id="banner" src="https://media.giphy.com/media/13jV1X6tgwm3i8/giphy.gif" alt="Banner Image"/>
             <h1> VOLUNTEER SERVICE MAIN PAGE</h1>
-            <input id="veteran" type="button" class="main_page_button" value="Register a VETERAN" /><br><br>
+            <div class="container">
+              <div class="btn">
+            <input id="veteran" type="button" class="main_page_button" value="Register a VETERAN" /> <br><br>
             <input id="volunteer" type="button" class="main_page_button" value="Register a VOLUNTEER" /><br><br>
-            
             <input id="orders" type="button" class="main_page_button" value="VIEW ORDERS" /><br><br>
+          </div>
+        </div>
             <div class="container">
                 <div class="btn-holder">
-                  <button type="button" id="veteren_login">SIGN IN AS veteran</button>
-                  <button type="button" id = "volunteer_login">SIGN IN AS volunteer</button>
+                  <button type="button"  class="button" id="veteren_login"  >SIGN IN AS veteran</button>
+                  <button type="button"  class="button" id = "volunteer_login" >SIGN IN AS volunteer</button>
                 </div>
               </div>
         </div>
@@ -63,7 +67,7 @@
 
                 <label class="label" for="veteran_location">veteran location:</label>
                  <div class = "map" id="veteran_location" required></div><br><br>
-		        <input class="refresh_button" id="veteran_refresh"  type="button" value="Refresh"><br><br>
+		        <input class="refresh_button" id="veteran_refresh"  type="button"  class="button" value="Refresh"><br><br>
 
                 <label class="label" for="veteran_address">Address:</label>
                 <input class="input" type="text" id="veteran_address" name="veteran_address" required><br><br>
@@ -74,7 +78,7 @@
                 <label class="label" for="veteran_password">Password:</label>
                 <input class="input" type="password" id="veteran_password" name="veteran_password" value="aasas" required><br><br>
 
-                <input id="next1" type="button" value="SUBMIT">
+                <input id="next1" type="button"  class="button" value="SUBMIT">
 
     </form>
     
@@ -92,14 +96,14 @@
         <input class="input" type="number" id="volunteer_Age" name="volunteer_Age" min="1" required><br><br>
         <label class="label" for="volunteer_location">volunteer location:</label>
 		<div class = "map" id="volunteer_location" required></div><br><br>
-		<input class="refresh_button" id="volunteer_refresh"  type="button" value="Refresh"><br><br>
+		<input class="refresh_button" id="volunteer_refresh"  type="button"  class="button" value="Refresh"><br><br>
         <label class="label" for="volunteer_address">Address:</label>
         <input class="input" type="text" id="volunteer_address" name="volunteer_address" required><br><br>
         <label class="label" for="volunteer_mail_id">Mail address:</label>
         <input class="input" type="text" id="volunteer_mail_id" name="volunteer_mail_id" required><br><br>
         <label class="label" for="volunteer_password">Password:</label>
         <input class="input" type="password" id="volunteer_password" name="volunteer_password" required><br><br>
-        <input id="next2" type="button" value="SUBMIT">
+        <input id="next2" type="button"  class="button" value="SUBMIT">
 
 </form>
 
@@ -112,8 +116,8 @@
         <input class="input" type="text" id="volunteer_mail" name="volunteer_mail" value="sherwin@hello.com" required><br><br>
         <label class="label" for="volunteer_Age">Password</label><br>
         <input class="input" type="password" id="volunteer_pass" name="volunteer_pass" value="hello" required><br><br>
-        <input id="volunteer_submit" type="button" value="SUBMIT">
-        <input id="homego1" type="button" value="GO TO Homepage">
+        <input id="volunteer_submit" type="button"  class="button" value="SUBMIT">
+        <input id="homego1" type="button"  class="button" value="GO TO Homepage">
 </form>
 
 <form id="veteran_sign_in" class="hidden_form">
@@ -125,8 +129,8 @@
         <input class="input" type="text" id="veteran_mail" name="veteran_mail" value="sherwin@hams.com" required><br><br>
         <label class="label" for="veteran_Age">Password</label><br>
         <input class="input" type="password" id="veteran_pass" name="veteran_pass" value="aasas" required><br><br>
-        <input id="veteran_submit" type="button" value="SUBMIT">
-        <input id="homego2" type="button" value="GO TO Homepage">
+        <input id="veteran_submit" type="button"  class="button" value="SUBMIT">
+        <input id="homego2" type="button"  class="button" value="GO TO Homepage">
 </form>
 
 <form id="register_done" class="hidden_form">
@@ -134,7 +138,7 @@
     <div class="subheader">
     <h2> REGISTERATION DONE</h2>
     <label class="label" for="volunteer_registered">Congrats now you can sign in with mail and password</label><br><br><br><br>
-    <input id="home" type="button" value="Return to Homepage">
+    <input id="home" type="button"  class="button" value="Return to Homepage">
 
     </div>
 </form>
@@ -144,7 +148,7 @@
   <div class="subheader">
   <h2> ITEM HAS BEEN ADDED</h2>
   <label class="label" for="order_added" id="order_added"></label><br><br><br><br>
-  <input id="home123" type="button" value="Return to Homepage">
+  <input id="home123" type="button"  class="button" value="Return to Homepage">
 
   </div>
 </form>
@@ -172,7 +176,7 @@
 		
   <div class="subheader">
   <h2>  ORDERS LIST </h2>
-  <table style="width:100%" id="orders_table_list" >
+  <table style="width:100%" id="orders_table_list" frame=hsides rules=rows>
     <tr>
       <th>ITEMS</th>
       <th>PRICE</th>
@@ -182,7 +186,7 @@
       <th>VOLUNTEER ACCEPTING ORDER</th>
     </tr>
   </table>
-  <input id="returntohome1234" value="Home" type="button"></button>
+  <input id="returntohome1234" value="Home" type="button"  class="button"></button>
   </div>
 </form>
 
@@ -191,166 +195,128 @@
   <div class="subheader">
   <h2> VETERAN ORDER PAGE</h2>
   </div>
-  <table style="width:100%">
-    <tr>
-      <th>ITEM</th>
-      <th>QUANTITY</th>
-      <th>PRICE</th>
-    </tr>
-    <tr>
-      <th id="item1">Apple</th>
-      <th><input type="number" min="0" id="quantity_item1" name="weight"></th>
-      <th>$1.0</th>
-    </tr>
-    <tr>
-      <th id="item2">Banana</th>
-      <th><input type="number" min="0" id="quantity_item2" name="weight"></th>
-      <th>$1.3</th>
-    </tr>
-    <tr>
-      <th id="item3">Bread</th>
-      <th><input type="number" min="0" id="quantity_item3" name="weight"></th>
-      <th>$2</th>
-    </tr>
-    <tr>
-      <th id="item4">Oatmeal</th>
-      <th><input type="number" min="0" id="quantity_item4" name="weight"></th>
-      <th>$4.7</th>
-    </tr>
-    <tr>
-      <th id="item5">Croissants</th>
-      <th><input type="number" min="0" id="quantity_item5" name="weight"></th>
-      <th>$7</th>
-    </tr>
-    <tr>
-      <th id="item6">Bun</th>
-      <th><input type="number" min="0" id="quantity_item6" name="weight"></th>
-      <th>$4</th>
-    </tr>
-    <tr>
-      <th id="item7">Peanut Butter</th>
-      <th><input type="number" min="0" id="quantity_item7" name="weight"></th>
-      <th>$5</th>
-    </tr>
-    <tr>
-      <th id="item8">Rice Cake</th>
-      <th><input type="number" min="0" id="quantity_item8" name="weight"></th>
-      <th>$4.9</th>
-    </tr>
-    <tr>
-      <th id="item9">Jam</th>
-      <th><input type="number" min="0" id="quantity_item9" name="weight"></th>
-      <th>$3</th>
-    </tr>
-    <tr>
-      <th id="item10">Milk - 1 Litre</th>
-      <th><input type="number" min="0" id="quantity_item10" name="weight"></th>
-      <th>$14</th>
-    </tr>
-    <tr>
-      <th id="item11">Egg - 10 pack</th>
-      <th><input type="number" min="0" id="quantity_item11" name="weight"></th>
-      <th>$7</th>
-    </tr>
-    <tr>
-      <th id="item12">Yogurt</th>
-      <th><input type="number" min="0" id="quantity_item12" name="weight"></th>
-      <th>$3</th>
-    </tr>
-    <tr>
-      <th id="item13">Cheese</th>
-      <th><input type="number" min="0" id="quantity_item13" name="weight"></th>
-      <th>$5</th>
-    </tr>
-    <tr>
-      <th id="item14">Pasta</th>
-      <th><input type="number" min="0" id="quantity_item14" name="weight"></th>
-      <th>$11</th>
-    </tr>
-    <tr>
-      <th id="item15">Tomato - 1kg</th>
-      <th><input type="number" min="0" id="quantity_item15" name="weight"></th>
-      <th>$4</th>
-    </tr>
-    <tr>
-      <th id="item16">Onion 1kg</th>
-      <th><input type="number" min="0" id="quantity_item16" name="weight"></th>
-      <th>$5</th>
-    </tr>
-    <tr>
-      <th id="item17">Tea</th>
-      <th><input type="number" min="0" id="quantity_item17" name="weight"></th>
-      <th>$6</th>
-    </tr>
-    <tr>
-      <th id="item18">Coffee</th>
-      <th><input type="number" min="0" id="quantity_item18" name="weight"></th>
-      <th>$7</th>
-    </tr>
-    <tr>
-      <th id="item19">Coconut milk</th>
-      <th><input type="number" min="0" id="quantity_item19" name="weight"></th>
-      <th>$5</th>
-    </tr>
-    <tr>
-      <th id="item20">Chicken 1kg</th>
-      <th><input type="number" min="0" id="quantity_item20" name="weight"></th>
-      <th>$14</th>
-    </tr>
-    <tr>
-      <th id="item21">Mutton 1kg</th>
-      <th><input type="number" min="0" id="quantity_item21" name="weight"></th>
-      <th>$14.9</th>
-    </tr>
-    <tr>
-      <th id="item22">Beef 1kg</th>
-      <th><input type="number" min="0" id="quantity_item22" name="weight"></th>
-      <th>$16.9</th>
-    </tr>
-    <tr>
-      <th id="item23">Pork 1kg</th>
-      <th><input type="number" min="0" id="quantity_item23" name="weight"></th>
-      <th>$16.5</th>
-    </tr>
-    <tr>
-      <th id="item24">Salmon 1kg</th>
-      <th><input type="number" min="0" id="quantity_item24" name="weight"></th>
-      <th>$15</th>
-    </tr>
-    <tr>
-      <th id="item25">Carrots</th>
-      <th><input type="number" min="0" id="quantity_item25" name="weight"></th>
-      <th>$5</th>
-    </tr>
-    <tr>
-      <th id="item26">Frozen vegetable</th>
-      <th><input type="number" min="0" id="quantity_item26" name="weight"></th>
-      <th>$6</th>
-    </tr>
-    <tr>
-      <th id="item27">Pizza</th>
-      <th><input type="number" min="0" id="quantity_item27" name="weight"></th>
-      <th>$10</th>
-    </tr>
-    <tr>
-      <th id="item28">Washing liquid</th>
-      <th><input type="number" min="0" id="quantity_item28" name="weight"></th>
-      <th>$4</th>
-    </tr>
-    <tr>
-      <th id="item29">Toothpaste</th>
-      <th><input type="number" min="0" id="quantity_item29" name="weight"></th>
-      <th>$3</th>
-    </tr>
-    <tr>
-      <th id="item30">Tissues</th>
-      <th><input type="number" min="0" id="quantity_item30" name="weight"></th>
-      <th>$2</th>
-    </tr>
-    <tr>
-  </table>
+  <img src="carrot.jpg" ><br>
+  <label class="label">Carrot $5</label><br>
+  <input type="number" min="0" id="quantity_item25" name="weight"><br><br>
+
+  <img src="banana.jpg" ><br>
+  <label class="label">Banana $1.3</label><br>
+  <input type="number" min="0" id="quantity_item2" name="weight"><br><br>
+
+  <img src="apple.jpg" ><br>
+  <label class="label">Apple $1.0</label><br>
+  <input type="number" min="0" id="quantity_item1" name="weight"><br><br>
+
+  <img src="bread.jpg" ><br>
+  <label class="label">Bread $2</label><br>
+  <input type="number" min="0" id="quantity_item3" name="weight"><br><br>
+
+  <img src="oatmeal.jpg" ><br>
+  <label class="label">Oatmeal $4.7/label><br>
+  <input type="number" min="0" id="quantity_item4" name="weight"><br><br>
+
+  <img src="croissants.jpg" ><br>
+  <label class="label">Croissants $7</label><br>
+  <input type="number" min="0" id="quantity_item5" name="weight"><br><br>
+
+  <img src="bun.jpg" ><br>
+  <label class="label">Bun $4</label><br>
+  <input type="number" min="0" id="quantity_item6" name="weight"><br><br>
+
+  <img src="peanut_butter.jpg" ><br>
+  <label class="label">Peanut Butter $5</label><br>
+  <input type="number" min="0" id="quantity_item7" name="weight"><br><br>
+
+  <img src="rice_cake.jpg" ><br>
+  <label class="label">Rice Cake $4.9</label><br>
+  <input type="number" min="0" id="quantity_item8" name="weight"><br><br>
+
+  <img src="jam.jpg" ><br>
+  <label class="label">Jam $3</label><br>
+  <input type="number" min="0" id="quantity_item9" name="weight"><br><br>
+
+  <img src="milk.jpg" ><br>
+  <label class="label">Milk - 1 Litre $14</label><br>
+  <input type="number" min="0" id="quantity_item10" name="weight"><br><br>
+
+  <img src="egg.jpg" ><br>
+  <label class="label">Egg - 10 pack $7</label><br>
+  <input type="number" min="0" id="quantity_item11" name="weight"><br><br>
+
+  <img src="yogurt.jpg" ><br>
+  <label class="label">Yogurt $3</label><br>
+  <input type="number" min="0" id="quantity_item12" name="weight"><br><br>
+
+  <img src="cheese.jpg" ><br>
+  <label class="label">Cheese $5</label><br>
+  <input type="number" min="0" id="quantity_item13" name="weight"><br><br>
+
+  <img src="pasta.jpg" ><br>
+  <label class="label">Pasta $11</label><br>
+  <input type="number" min="0" id="quantity_item14" name="weight"><br><br>
+
+  <img src="tomato.jpg" ><br>
+  <label class="label">Tomato - 1kg $4</label><br>
+  <input type="number" min="0" id="quantity_item15" name="weight"><br><br>
+
+  <img src="onion.jpg" ><br>
+  <label class="label">Onion 1kg $5</label><br>
+  <input type="number" min="0" id="quantity_item16" name="weight"><br><br>
+
+  <img src="tea.jpg" ><br>
+  <label class="label">Tea $6</label><br>
+  <input type="number" min="0" id="quantity_item17" name="weight"><br><br>
+
+  <img src="coffee.jpg" ><br>
+  <label class="label">Coffee $7</label><br>
+  <input type="number" min="0" id="quantity_item18" name="weight"><br><br>
+
+  <img src="coconut.jpg" ><br>
+  <label class="label">Coconut milk $5</label><br>
+  <input type="number" min="0" id="quantity_item19" name="weight"><br><br>
+
+  <img src="chicken.jpg" ><br>
+  <label class="label">Chicken 1kg $14</label><br>
+  <input type="number" min="0" id="quantity_item20" name="weight"><br><br>
+
+  <img src="mutton.jpg" ><br>
+  <label class="label">Mutton 1kg $14.9</label><br>
+  <input type="number" min="0" id="quantity_item21" name="weight"><br><br>
+
+  <img src="beef.jpg" ><br>
+  <label class="label">Beef 1kg $16.9</label><br>
+  <input type="number" min="0" id="quantity_item22" name="weight"><br><br>
+
+  <img src="pork.jpg" ><br>
+  <label class="label">Pork 1kg $16.5</label><br>
+  <input type="number" min="0" id="quantity_item23" name="weight"><br><br>
+
+  <img src="salmon.jpg" ><br>
+  <label class="label">Salmon 1kg $15</label><br>
+  <input type="number" min="0" id="quantity_item24" name="weight"><br><br>
+  
+  <img src="frozen_veg.jpg" ><br>
+  <label class="label">Frozen vegetable $6</label><br>
+  <input type="number" min="0" id="quantity_item26" name="weight"><br><br>
+
+  <img src="pizza.jpg" ><br>
+  <label class="label">Pizza $10</label><br>
+  <input type="number" min="0" id="quantity_item27" name="weight"><br><br>
+
+  <img src="washing_liquid.jpg" ><br>
+  <label class="label">Washing liquid $4</label><br>
+  <input type="number" min="0" id="quantity_item28" name="weight"><br><br>
+
+  <img src="toothpaste.jpg" ><br>
+  <label class="label">Toothpaste  $3</label><br>
+  <input type="number" min="0" id="quantity_item29" name="weight"><br><br>
+
+  <img src="tissues.jpg" ><br>
+  <label class="label">Tissues $2</label><br>
+  <input type="number" min="0" id="quantity_item30" name="weight"><br><br>
+
   <br><br><br><br>
-  <input  type="button" value="SUBMIT ORDER" id="sub_order"></button>
+  <input  type="button"  class="button" value="SUBMIT ORDER" id="sub_order"></button>
 </form>
 
             </body>

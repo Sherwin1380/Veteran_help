@@ -11,12 +11,6 @@ body
     text-align: center;
 }
 
-.container {
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100vh;
-    display: flex;
-  }
   .container .btn-holder {
     justify-content: flex-end;
     display: flex;
@@ -39,3 +33,34 @@ body
 th, td {
   padding: 15px;
 }
+
+.button{
+  padding:0.5em 3em;
+  border:0.16em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color:coral;
+  background-color: black;
+  text-align:center;
+  transition: all 0.15s;
+  }
+ .button:hover{
+  color:#DDDDDD;
+  border-color:#DDDDDD;
+  }
+  .button:active{
+  color:#BBBBBB;
+  border-color:#BBBBBB;
+  }
+  table {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center; 
+    padding:5px 
+  }
+

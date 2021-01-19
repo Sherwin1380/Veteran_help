@@ -1,4 +1,5 @@
 window.onload = function load(){
+    
 
     var icon = L.divIcon({
         className: "my-custom-pin",
@@ -417,7 +418,8 @@ fetch('https://localhost:44335/api/Credentials', {
     document.getElementById("orders").onclick = function return_home(){
         document.getElementById("main_form").style.display = "none";
         document.getElementById("orders_table").style.display = "block";
-        
+        var mytbl = document.getElementById("orders_table_list");
+mytbl.getElementsByTagName("tbody")[0].innerHTML = mytbl.rows[0].innerHTML;
         var address = 'https://localhost:44335/api/Veteran/';
 		fetch(address, {
 			method: 'GET',
