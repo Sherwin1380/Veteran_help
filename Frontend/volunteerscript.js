@@ -153,6 +153,8 @@ window.onload = function load(){
          }
          else
             {
+                if(document.getElementById("veteran_Age").value>50)
+            {
             console.log("assa");
             //Constructing JSON		
             const data = { 
@@ -195,7 +197,12 @@ window.onload = function load(){
               console.error('Error:', error);
             });
     }
+    else
+    {
+        alert("Only people above 50 can register as a veteran")
+    }
 }
+        }
 
 document.getElementById("next2").onclick = function store_volunteer_value(){
     console.log("assa");
